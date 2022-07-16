@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Core Agriculture Managment Panel</title>
+    
+    <link href="{{url_for('static', filename='styles/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='styles/costum.css')}}" rel="stylesheet">
+    
+</head>
+  <body>
+    <div class="container-fluid container-c">
+
+        <!-- Navigasyon başlangıç-->
+        <nav class="navbar navbar-expand-lg nav-color">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                <img src="{{url_for('static', filename='images/logo.png')}}" alt=""  height="40" class="d-inline-block align-text-top">
+                <a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item ">
+                        <a class="nav-link active" aria-current="page" href="#">Video</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link active" href="#">Analiz</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link active">Grafik</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navigasyon son-->
+
+
+
+
+       <div class="row">
+        <div class="col-md-9 ">
+            <div class="row d-flex justify-content-around ">
+                <div class="col-md-5  col-c d-flex justify-content-around">
+                    <img class="img-fluid row" src="{{ url_for('video_feed') }}" alt="segmentation">
+                </div>
+                <div class="col-md-5  col-c d-flex justify-content-around">
+                    <img class="img-fluid" src="{{ url_for('video_feed') }}" alt="segmentation">
+                </div>
+            </div>
+            <div class="row d-flex justify-content-around">
+                <div class="col-md-5 col-c d-flex justify-content-around">
+                    <img class="img-fluid" src="{{ url_for('video_feed') }}" alt="segmentation">
+                </div>
+                <div class="col-md-5  col-c d-flex justify-content-around">
+                    <img class="img-fluid" src="{{ url_for('video_feed') }}" alt="segmentation">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-c">
+            <!-- <form action="/segment" method="POST"> -->
+                
+            <label for="customRange2" class="form-label">Lower - H</label>
+            <input id="lower-h" type="range" class="form-range" min="0" max="180" id="customRange2" value="0">   
+
+            <label for="customRange2" class="form-label">Lower - S</label>
+            <input id="lover-s" type="range" class="form-range" min="0" max="255" id="customRange2" value="0"> 
+            
+            <label for="customRange2" class="form-label">Lower - V</label>
+            <input id="lover-v" type="range" class="form-range" min="0" max="255" id="customRange2" value="0"> 
+
+            <label for="customRange2" class="form-label">Upper - H</label>
+            <input id="upper-h" type="range" class="form-range" min="0" max="180" id="customRange2" value="180"> 
+
+            <label for="customRange2" class="form-label">Upper - S</label>
+            <input id="upper-s" type="range" class="form-range" min="0" max="255" id="customRange2" value="255"> 
+
+            <label for="customRange2" class="form-label">Upper - V</label>
+            <input id="upper-v" type="range" class="form-range" min="0" max="255" id="customRange2" value="255"> 
+
+            <input type="submit" value="Gönder">
+            <!-- </form> -->
+
+            <p id="values"></p>
+
+        </div>
+        
+       </div>
+
+    </div>
+
+
+
+
+    <script src="{{url_for('static', filename='scripts/bootstrap.bundle.min.js')}}" ></script>
+    <script src="{{url_for('static', filename='scripts/bootstrap.min.js')}}" ></script>
+    <script src="{{url_for('static', filename='scripts/popper.min.js')}}" ></script>
+    <script src="{{url_for('static', filename='scripts/jquery-3.6.0.min.js')}}" ></script>
+    <script src="{{url_for('static', filename='scripts/costum.js')}}" ></script>
+</body>
+</html>

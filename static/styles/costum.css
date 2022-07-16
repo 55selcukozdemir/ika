@@ -1,0 +1,41 @@
+.nav-color{
+
+    margin: 25;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: rgb(204, 204, 204);
+    
+    
+
+}
+.html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  
+
+}
+
+.container-c{
+
+    padding: 0;
+   
+
+}
+
+.row{
+    margin: 0;
+}
+
+
+.images{
+    max-height: 250px;
+
+    
+}
+.col-c{
+    margin-top: 25px;
+}
+
+
+  
